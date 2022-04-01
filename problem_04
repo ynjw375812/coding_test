@@ -1,0 +1,10 @@
+/*-----------Tail_Recursion----------------*/
+
+//3번의 재귀함수의 단점을 보완하고자 Tail_Recursion의 이론을 사용하였다.
+// 이 전과의 달라진 점은 반환된 함수와 다시 계산을 하는 것이 아니라 계산된 함수를 한번만 호출하여 
+//값만 보낸다는 것이다. 하지만 지금 코드를 계속 바꿔도 보고 했지만 만까지 밖에 값이 안나오고 그 이상은 maixium stack size 메시지가 뜬다.
+const Factorial=(data,total=1)=>{
+   return data === 0 ? total : Factorial(data-1,data*total);
+}
+const aa=Factorial(1000);
+console.log(aa);
