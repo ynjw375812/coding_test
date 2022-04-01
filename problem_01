@@ -1,0 +1,18 @@
+var Bread = function(Type,{...price}) {
+      const bread={breadType:Type}
+      const Recipe={recipe:{...price}} //recipe안에 많은 Key-Value값들을 갯수 제한 없이 넣기 위해서 스프레드 연산자 사용
+      const sum=Object.assign({},bread,Recipe); /breadType과 recipe 객체를 새로운 객체로 합친다.
+      return sum;
+    
+  }
+      var count=0;
+//배열 리스트 순차적으로 출력.      
+function Extra(List){
+    console.log(List);
+ }
+ 
+const first=Bread('Cream',{Flour:100,Water:100,Butter:200});
+const second=Bread('Sugar',{Flour:100,Water:50,Butter:200});
+const third=Bread('Butter',{Flour:100,Water:100,Butter:50});
+const List=[first,second,third]; //두 객체를 합친 변수들을 배열에 저장.
+Extra(List);
