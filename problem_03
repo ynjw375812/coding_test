@@ -1,0 +1,14 @@
+/*---------Factorial----------------*/
+
+//재귀함수를 통해서 Factorial초기값과 -1씩 data를 감소시켜 그전에 재귀 함수에서 반환된 값과 다시 계산을 하는 방식이다.
+//이 재귀 함수의 문제는 적은 숫자의 계산으르 하는 부분에서도 메모리를 많이 잡아먹는다.
+//이유는 데이터의 값을 0까지 감소시키다가 0부터 다시 그 전에 반환했던 함수와 다시 계산을 해야 되는 단점이 있다.
+const Factorial =(data) =>{
+     if(data === 0)
+     {
+         return 1;
+     }
+    return data * Factorial(data-1);
+}
+const result=Factorial(100);
+console.log(result);
