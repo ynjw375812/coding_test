@@ -1,0 +1,16 @@
+const caculate ={
+    number:0,
+
+    add(number) {
+      this.number+=number; //객체의 변수의 접근하기 위해서 this를 사용하여 입력된 값을 반환하여 지속적인 데이터를 더하여 저장한다.
+      return this;
+    },
+    subtract(number) {
+     this.number-=number; //방식은 위와 동일하다.
+     return this;
+    },
+    out:function() {
+     console.log(this.number);    
+    }
+};
+caculate.add(4).add(5).subtract(3).out();
